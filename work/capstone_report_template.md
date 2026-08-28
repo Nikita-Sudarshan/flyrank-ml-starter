@@ -33,13 +33,13 @@ purpose). The target or proxy definition, in one sentence.
 
 ## 5. Evaluation
 
-Your split (grouped by client? time-aware?) and why. Metrics, model vs baseline **on the same
-split**. What the errors look like — a short error analysis beats a big metric table.
+The test-set observed down base rate was 52.5% (0.525).
 
 ## 6. Interpretation
 
-What the model/clusters actually found. Feature importances or cluster profiles in plain
-words. Surprises and negative results — a well-understood "no effect" is a valid result.
+The highest source-level feature importances in the fitted Random Forest were position_tier (0.1203), freshness_tier (0.0882), word_count (0.0762), content_age_days (0.0639), and char_count (0.0622). Other relatively important features included sessions_last_30d (0.0620), age_tier (0.0536), days_since_last_update (0.0507), and model_used (0.0463).
+
+These are model importance values, not causal effects. In this fitted model, position, freshness, content length, age, and recent session activity contributed relatively strongly to the ranking.
 
 ## 7. Recommendation
 
